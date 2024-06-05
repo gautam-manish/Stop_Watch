@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0%;
 }
@@ -14,7 +14,7 @@ body {
 }
 
 #myH1 {
-    font-size:11vw;
+    font-size: 11vw;
     font-family: "Ariel", sans-serif;
     margin-bottom: 50px;
 }
@@ -52,22 +52,26 @@ body {
     transition: background-color 0.5s ease;
 }
 
-#startBtn{
+#startBtn {
     background-color: hsla(115, 100%, 40%);
 }
 
-#startBtn:hover{
+#startBtn:hover {
     background-color: hsla(115, 100%, 30%);
 }
-#stopBtn{
+
+#stopBtn {
     background-color: hsla(10, 90%, 50%);
 }
-#stopBtn:hover{
+
+#stopBtn:hover {
     background-color: hsla(10, 90%, 40%);
 }
-#resetBtn{
+
+#resetBtn {
     background-color: hsla(205, 90%, 60%);
 }
-#resetBtn:hover{
+
+#resetBtn:hover {
     background-color: hsla(205, 90%, 50%);
 }

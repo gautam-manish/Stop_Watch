@@ -5,26 +5,26 @@ let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false;
 
-function start(){
+function start() {
 
-    if(!isRunning){
+    if (!isRunning) {
         startTime = Date.now() - elapsedTime;
         timer = setInterval(update, 10);
         isRunning = true;
     }
 }
 
-function stop(){
+function stop() {
 
-    if(isRunning){
+    if (isRunning) {
         clearInterval(timer);
         elapsedTime = Date.now() - startTime;
         isRunning = false;
     }
 }
 
-function reset(){
-    clearInterval (timer);
+function reset() {
+    clearInterval(timer);
     startTime = 0;
     elapsedTime = 0;
     isRunning = false;
@@ -32,7 +32,7 @@ function reset(){
 }
 
 
-function update(){
+function update() {
 
     const currentTime = Date.now();
     elapsedTime = currentTime - startTime;
@@ -45,10 +45,10 @@ function update(){
 
     let milliseconds = Math.floor(elapsedTime % 1000 / 10);
 
-    hours = String(hours).padStart(2,"0");
-    minutes = String(minutes).padStart(2,"0");seconds = String(seconds).padStart(2,"0");
-    milliseconds = String(milliseconds).padStart(2,"0");
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0"); seconds = String(seconds).padStart(2, "0");
+    milliseconds = String(milliseconds).padStart(2, "0");
 
     display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
-    
+
 }
